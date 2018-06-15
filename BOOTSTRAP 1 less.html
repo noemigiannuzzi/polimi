@@ -1,0 +1,220 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Cover Menu Transitions</title>
+
+
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <div id="CoverMenu" class="cover row slideUp">
+  <div class="col col-md-4 blue" data-tab="Item1">
+    Menu 1
+  </div>
+  <div class="col col-md-4 purple" data-tab="Item2">Menu 2</div>
+  <div class="col col-md-4 blue" data-tab="Item3">Menu 3</div>
+</div>
+
+<ul class="nav nav-tabs blue flex-column" role="tablist" aria-orientation="vertical">
+  <li class="nav-item">
+    <a class="nav-link homeLink" href="#" data-toggle="tab" role="tab" aria-controls="home" aria-selected="false">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="TabLink-Item1" href="#Item1" data-toggle="tab" role="tab" aria-controls="Item1" aria-selected="true">Menu 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="TabLink-Item2" href="#Item2" data-toggle="tab" role="tab" aria-controls="Item2" aria-selected="false">Menu 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active show" id="TabLink-Item3" href="#Item3" data-toggle="tab" role="tab" aria-controls="Item3" aria-selected="true">Menu 3<div class="navArrow"></div></a>
+  </li>
+</ul>
+
+<div class="contentContainer tab-content">
+  <div class="tab-pane fade" id="Item1">
+    <h2>Menu 1 Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id. Magna sit amet purus gravida quis. Pellentesque habitant morbi tristique
+      senectus et netus. Tortor at risus viverra adipiscing. Egestas sed tempus urna et pharetra pharetra. Faucibus et molestie ac feugiat sed. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Id eu nisl nunc mi ipsum. Ultrices
+      mi tempus imperdiet nulla malesuada pellentesque elit. Nisl pretium fusce id velit ut tortor pretium. Id porta nibh venenatis cras sed felis. Cras sed felis eget velit. Quisque egestas diam in arcu. Elementum integer enim neque volutpat ac tincidunt
+      vitae. Luctus accumsan tortor posuere ac ut consequat semper viverra. At tempor commodo ullamcorper a. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Elementum nibh tellus molestie nunc non blandit massa enim.
+    </p>
+  </div>
+  <div class="tab-pane fade" id="Item2">
+    <h2>Menu 2 Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id. Magna sit amet purus gravida quis. Pellentesque habitant morbi tristique
+      senectus et netus.
+    </p>
+  </div>
+  <div class="tab-pane fade active show" id="Item3">
+    <h2>Menu 3 Content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id. Magna sit amet purus gravida quis. Pellentesque habitant morbi tristique
+      senectus et netus.
+    </p>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<style>
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}
+.cover.row {
+  margin: 0;
+}
+.cover .col {
+  text-align: center;
+  padding-top: 25%;
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+}
+.blue {
+  background-color: #aaaaff;
+}
+.purple {
+  background-color: #ffaaff;
+}
+
+.nav {
+  left: 0;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+}
+.nav .nav-link {
+  color: white;
+}
+.nav .nav-link.active {
+  background-color: #aaaaff;
+  color: white;
+}
+.navArrow {
+  position: absolute;
+  margin-top: -2em;
+  left: 198px;
+  width: 0;
+  height: 0;
+  border-top: 1.25em solid transparent;
+  border-bottom: 1.25em solid transparent;
+  border-left: 1.25em solid #aaaaff;
+}
+/*TODO: add active link triangle*/
+
+.contentContainer {
+  display: block;
+  margin-left: 250px;
+  padding: 2em;
+  color: #333;
+  top: 0;
+}
+
+.slideUp {
+  animation: slideUp 1s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slideUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+.slideDown {
+  animation: slideDown 1s ease-in-out 1;
+}
+@keyframes slideDown {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.slowFadeInAndOut {
+  animation: fadeIn 10s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>
+<script>
+$(document).ready(function() {
+  var cover = $('#CoverMenu');
+
+  $('#CoverMenu .col').on('click', function() {
+    var tab = $(this).data('tab');
+    $('#TabLink-' + tab).tab('show')
+
+    animateSlideUp(cover);
+  });
+  // TODO: add sidebar animation
+
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    if(!$(this).hasClass('homeLink')) {
+      $('.navArrow').remove();
+      $(this).append('<div class="navArrow"></div>');
+    }
+  });
+
+  $('.homeLink').on('click', function() {
+    animateSlideDown(cover);
+  })
+});
+
+function animateSlideUp(element, callback) {
+  element.removeClass('slideDown');
+  element.addClass('slideUp');
+  if(callback) {
+    callback();
+  }
+}
+
+function animateSlideDown(element, callback) {
+  element.removeClass('slideUp');
+  element.addClass('slideDown');
+  if(callback) {
+    callback();
+  }
+}
+</script>
+
+
+    <script src="js/index.js"></script>
+
+
+
+
+
+
+
+</body></html>

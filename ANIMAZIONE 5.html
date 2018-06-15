@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+
+@keyframes spin {
+ from {transform: rotate(0) scale(1) translate(0,0)}
+ to {transform: rotate(360deg) scale(0.5) translate(100px,0)}
+}
+
+#spinner {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ animation: spin 1s infinite alternate;
+ height: 50px;
+ width: 50px;
+ background-color: red;
+}
+
+</style>
+</head>
+<body>
+<div id="spinner"> </div>
+</body>
+</html>
